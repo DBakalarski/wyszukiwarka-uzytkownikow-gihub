@@ -16,7 +16,7 @@ class App extends React.Component {
 		const {searchText} = this.state;
 		const url = `https://api.github.com/search/users?q=${searchText}`;
 		fetch(url)
-			.then(reponse => response.json())
+			.then(response => response.json())
 			.then(responseJson  => this.setState({users: responseJson.items}));
 	}
 
@@ -28,10 +28,10 @@ class App extends React.Component {
 					<input
 						type='text'
 						id='searchText'
-						onChange={event => onChangeHandle(event)}
+						onChange={event => this.onChangeHandle(event)}
 						value={this.state.searchText}/>
 				</form>
-				<UserList users={this.state.users}/>
+				<UsersList users={this.state.users}/>
 			</div>
 		);
 	}
