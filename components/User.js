@@ -1,5 +1,5 @@
 class User extends React.Component {
-	rennder() {
+	render() {
 		return (
 			<div>
 				<img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
