@@ -24,7 +24,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<form onSubmit={event => this.onSubmit(event)}>
-					<label htmlFor='serachText'>Search by user name</label>
+					<label className={'labelText'} htmlFor='serachText'>Search by user name</label>
 					<input
 						type='text'
 						id='searchText'
